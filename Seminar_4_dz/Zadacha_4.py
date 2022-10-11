@@ -29,9 +29,19 @@ def random_k(k_):
         if i == k_:
            return k_utf[i]
 
-    
-
-
-
 k =(input('Введите степень: '))
-print (f"{random_ratio()}*x{random_k(k)}{random_sign()}{random_ratio()}*x = 0",end=" " )
+lst=[]
+lst.append(random_ratio())
+lst.append("*x")
+lst.append(random_k(k))
+lst.append(random_sign())
+lst.append(random_ratio())
+lst.append("*x = 0")
+itog = "".join(str(i) for i in lst)
+print(itog)
+
+# print (f"{random_ratio()}*x{random_k(k)}{random_sign()}{random_ratio()}*x = 0",end=" ")
+
+
+with open('polynomial','w', encoding='utf-8') as polynomial:
+    polynomial.write(itog)
