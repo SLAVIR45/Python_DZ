@@ -2,14 +2,14 @@
 # в том числе для отрицательных индексов.
 
 
-
+n = 10
 fib = [0, 1]
-for i in range(10):
+for i in range(n-1):
     fib.append(fib[-2] - fib[-1])
 
 fib.reverse()
 
-for j in range(10):
+for j in range(n):
     fib.append(fib[-1] + fib[-2])
 
 print(fib)   
