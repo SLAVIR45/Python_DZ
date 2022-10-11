@@ -3,8 +3,16 @@
 
 
 
+fib = [0, 1]
+for i in range(10):
+    fib.append(fib[-2] - fib[-1])
 
-# Не готова. пока не разобрался с отриццательными . 
+fib.reverse()
+
+for j in range(10):
+    fib.append(fib[-1] + fib[-2])
+
+print(fib)   
 
 
 
